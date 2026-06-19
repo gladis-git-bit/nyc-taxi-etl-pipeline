@@ -1,0 +1,49 @@
+<svg width="900" height="380" viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f5f7fa; stroke: #2b3a55; stroke-width: 2; rx: 10; }
+    .accent { fill: #e8f0fe; stroke: #1a73e8; stroke-width: 2; rx: 10; }
+    .label { font-family: Arial, sans-serif; font-size: 14px; fill: #1a1a1a; text-anchor: middle; }
+    .sublabel { font-family: Arial, sans-serif; font-size: 11px; fill: #555; text-anchor: middle; }
+    .arrow { stroke: #2b3a55; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .stagelabel { font-family: Arial, sans-serif; font-size: 12px; fill: #1a73e8; text-anchor: middle; font-weight: bold; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2b3a55" />
+    </marker>
+  </defs>
+  <rect class="box" x="20" y="90" width="160" height="90" />
+  <text class="label" x="100" y="125">Kaggle CSV</text>
+  <text class="sublabel" x="100" y="145">NYC Taxi Trip Data</text>
+  <text class="sublabel" x="100" y="160">(1.45M raw rows)</text>
+  <text class="stagelabel" x="100" y="75">EXTRACT</text>
+  <line class="arrow" x1="180" y1="135" x2="230" y2="135" />
+  <rect class="accent" x="230" y="90" width="160" height="90" />
+  <text class="label" x="310" y="120">Polars</text>
+  <text class="sublabel" x="310" y="140">Clean, filter outliers,</text>
+  <text class="sublabel" x="310" y="155">engineer features</text>
+  <text class="stagelabel" x="310" y="75">TRANSFORM</text>
+  <line class="arrow" x1="390" y1="135" x2="440" y2="135" />
+  <rect class="box" x="440" y="90" width="160" height="90" />
+  <text class="label" x="520" y="125">Parquet File</text>
+  <text class="sublabel" x="520" y="145">data/processed/</text>
+  <text class="sublabel" x="520" y="160">1.45M clean rows</text>
+  <text class="stagelabel" x="520" y="75">CONVERT</text>
+  <line class="arrow" x1="600" y1="135" x2="650" y2="135" />
+  <rect class="accent" x="650" y="90" width="220" height="90" />
+  <text class="label" x="760" y="120">Google BigQuery</text>
+  <text class="sublabel" x="760" y="140">Cloud data warehouse</text>
+  <text class="sublabel" x="760" y="155">Idempotent full-refresh load</text>
+  <text class="stagelabel" x="760" y="75">LOAD</text>
+  <rect class="box" x="230" y="240" width="400" height="60" />
+  <text class="label" x="430" y="265">run_pipeline.py</text>
+  <text class="sublabel" x="430" y="282">Orchestrates Extract → Transform → Load in one command</text>
+  <line class="arrow" x1="430" y1="240" x2="430" y2="180" />
+  <rect class="box" x="230" y="320" width="400" height="50" />
+  <text class="label" x="430" y="340" font-size="13">Windows Task Scheduler</text>
+  <text class="sublabel" x="430" y="357">Runs the pipeline automatically on a daily schedule</text>
+  <line class="arrow" x1="430" y1="320" x2="430" y2="300" />
+  <rect class="box" x="700" y="240" width="170" height="60" />
+  <text class="label" x="785" y="265" font-size="13">Git + GitHub</text>
+  <text class="sublabel" x="785" y="282">Version-controlled code</text>
+</svg>
